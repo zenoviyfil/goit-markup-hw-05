@@ -675,6 +675,41 @@ section {
   margin-top: 4px;
 }
 
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item-label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  position: absolute;
+  width: 370px;
+  height: auto;
+  left: 0;
+  bottom: -101%;
+  transition: all 250ms linear;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+}
+
+.projects-portfolio-item:hover .portfolio-item-label,
+.projects-portfolio-item:focus .portfolio-item-label {
+  left: 0;
+  bottom: 0;
+}
+
 /* --- -------------- --- */
 
 /* --- footer --- */
