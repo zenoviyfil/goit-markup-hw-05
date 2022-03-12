@@ -391,6 +391,7 @@ section {
 }
 
 .offer-item {
+  position: relative;
   display: block;
   max-width: 100%;
   height: auto;
@@ -399,6 +400,32 @@ section {
 
 .offer-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.offer-item > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(47, 48, 58, 0.8);
+  left: 0;
+  bottom: 0;
 }
 
 /* --- ------------- --- */
