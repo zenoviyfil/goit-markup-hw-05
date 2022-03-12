@@ -177,7 +177,6 @@ section {
 
 .nav-menu {
   align-items: center;
-  margin-right: 305px;
 }
 .nav-list {
   display: flex;
@@ -194,7 +193,7 @@ section {
 .contacts {
   display: flex;
   list-style-type: none;
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .contacts > li {
@@ -256,6 +255,8 @@ section {
   max-width: 1600px;
   height: 600px;
   padding: 0;
+  margin-right: auto;
+  margin-left: auto;
   background-image: url(../imges/Imgbg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -465,13 +466,7 @@ section {
 }
 
 .social-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   list-style-type: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
 }
 
 .social-list-item:hover,
@@ -488,8 +483,13 @@ section {
 }
 
 .social-list-item > a {
-  width: 20px;
-  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 
 .social-list-icon {
@@ -498,13 +498,13 @@ section {
   fill: #afb1b8;
 }
 
-.social-list-item:hover .social-list-icon,
-.social-list-item:focus .social-list-icon {
+.social-list-item > a:hover .social-list-icon,
+.social-list-item > a:focus .social-list-icon {
   fill: var(--white-color);
 }
 
-.social-list-item:hover,
-.social-list-item:focus {
+.social-list-item > a:hover,
+.social-list-item > a:focus {
   background-color: var(--link-color);
   cursor: pointer;
 }
@@ -531,8 +531,6 @@ section {
 .clients-item {
   display: flex;
   margin-right: 30px;
-  align-items: center;
-  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -543,20 +541,23 @@ section {
   margin-right: 0;
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-item > a:hover,
+.clients-item > a:focus {
   border: 1px solid var(--link-color);
   cursor: pointer;
 }
 
-.clients-item:hover .clients-logo,
-.clients-item:focus .clients-logo {
+.clients-item > a:hover .clients-logo,
+.clients-item > a:focus .clients-logo {
   fill: var(--link-color);
 }
 
 .clients-item > a {
-  width: 106px;
-  height: 60px;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .clients-logo {
@@ -723,20 +724,11 @@ footer {
   margin-top: 20px;
 }
 
-.social-footer-list > li:hover {
-  background-color: var(--link-color);
-  cursor: pointer;
-}
-
 .social-footer-item {
-  display: flex;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .social-footer-item:last-child {
@@ -750,8 +742,20 @@ footer {
 }
 
 .social-footer-item > a {
-  width: 20px;
-  height: 20px;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.social-footer-item > a:focus,
+.social-footer-item > a:hover {
+  background-color: var(--link-color);
+  cursor: pointer;
 }
 
 /* --- ------ --- */ ;
