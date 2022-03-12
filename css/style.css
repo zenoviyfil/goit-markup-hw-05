@@ -408,7 +408,7 @@ section {
   height: 100%;
 }
 
-.label {
+.offer-item-description {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -686,7 +686,7 @@ section {
   height: 100%;
 }
 
-.portfolio-item-label {
+.overlay-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -704,8 +704,8 @@ section {
   padding: 63px 24px;
 }
 
-.projects-portfolio-item:hover .portfolio-item-label,
-.projects-portfolio-item:focus .portfolio-item-label {
+.projects-portfolio-item:hover .overlay-text,
+.projects-portfolio-item:focus .overlay-text {
   left: 0;
   bottom: 0;
 }
