@@ -65,7 +65,9 @@
       <section class="hero-section">
         <div class="hero">
           <h1 class="main-theme">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="main-theme-btn">Заказать услугу</button>
+          <button type="button" class="main-theme-btn" data-open-modal>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section>
@@ -420,9 +422,9 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-backdrop>
       <div class="modal">
-        <button type="button" class="close-btn">
+        <button type="button" class="close-btn" data-close-modal>
           <img src="./imges/close-btn.png" alt="закрить" />
         </button>
       </div>
@@ -434,13 +436,13 @@
         backdrop: document.querySelector("[data-backdrop]"),
       };
 
-      refs.openModalBtnRef.addEventListener("click", toggleModal);
-      refs.closeModalBtnRef.addEventListener("click", toggleModal);
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
 
-      refs.backdropRef.addEventListener("click", logBackdropClick);
+      refs.backdrop.addEventListener("click", logBackdropClick);
 
       function toggleModal() {
-        refs.backdropRef.classList.toggle("is-hidden");
+        refs.backdrop.classList.toggle("is-hidden");
       }
 
       function logBackdropClick() {
