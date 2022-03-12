@@ -420,12 +420,32 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="close-btn">
+        <button type="button" class="close-btn">
           <img src="./imges/close-btn.png" alt="закрить" />
         </button>
       </div>
     </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtnRef.addEventListener("click", toggleModal);
+      refs.closeModalBtnRef.addEventListener("click", toggleModal);
+
+      refs.backdropRef.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdropRef.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
